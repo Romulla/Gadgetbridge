@@ -204,6 +204,7 @@ import nodomain.freeyourgadget.gadgetbridge.devices.gloryfit.watches.QecnatoS10C
 import nodomain.freeyourgadget.gadgetbridge.devices.gloryfit.watches.S52Coordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.gloryfit.watches.Y66Coordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.gloryfit.watches.Y6Coordinator;
+import nodomain.freeyourgadget.gadgetbridge.devices.gloryfit.watches.RoundswitchCoordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.gree.GreeAcCoordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.hama.fit6900.HamaFit6900DeviceCoordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.haylou.HaylouS35AncCoordinator;
@@ -1025,7 +1026,8 @@ public enum DeviceType {
     IGPSPORT_IGS630S(IGPSportiGS630SCoordinator.class),
     IGPSPORT_IGS800(IGPSportiGS800Coordinator.class),
     IGPSPORT_BINAVI_AIR(IGPSportBiNaviAirCoordinator.class),
-    TEST(TestDeviceCoordinator.class);
+    TEST(TestDeviceCoordinator.class),
+    WOWME_ROUNDSWITCH(RoundswitchCoordinator.class);
 
     private DeviceCoordinator coordinator;
 
