@@ -14,11 +14,15 @@
 
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>. */
+
 package nodomain.freeyourgadget.gadgetbridge.devices.gloryfit.watches
+
 
 import nodomain.freeyourgadget.gadgetbridge.R
 import nodomain.freeyourgadget.gadgetbridge.devices.gloryfit.GloryFitCoordinator
 import java.util.regex.Pattern
+
+/* import nodomain.freeyourgadget.gadgetbridge.model.DeviceType.java */
 
 class RoundswitchCoordinator : GloryFitCoordinator() {
     override fun getManufacturer(): String {
@@ -30,15 +34,18 @@ class RoundswitchCoordinator : GloryFitCoordinator() {
     }
 
     override fun getDeviceNameResource(): Int {
-        return R.string.devicetype_haylou_watch_2_pro
+/*      return R.string.devicetype_haylou_watch_2_pro */
+        return R.string.devicetype_wowme_roundswitch
     }
 
     override fun getBondingStyle(): Int {
-        // # It seems to fail to pair
+        // # It seems to fail to pair otherwise
         return BONDING_STYLE_NONE
     }
 
-/*    override fun getDeviceType(): DeviceType {
+/*  This didn't compile: 'getDeviceType' overrides nothing, even if model.DeviceType.java included.
+    Is the type WOWME_ROUNDSWITCH useless then?
+    override fun getDeviceType(): DeviceType {
         return DeviceType.WOWME_ROUNDSWITCH
     }
 */
